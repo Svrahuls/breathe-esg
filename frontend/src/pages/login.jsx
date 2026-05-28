@@ -15,7 +15,7 @@ export default function Login({ onLogin }) {
       const data = await login(username.trim(), password);
       onLogin(data.user);
     } catch (err) {
-      // ✅ Sahi
+      
 setError(error.response?.data?.detail || error.response?.data?.message || error.message || "Login failed")
     } finally {
       setLoading(false);
@@ -51,9 +51,9 @@ setError(error.response?.data?.detail || error.response?.data?.message || error.
             {loading ? "Signing in…" : "Sign In"}
           </button>
         </form>
-        <p className="text-center text-xs text-slate-600">
-          No account? Run <code className="bg-slate-800 px-1.5 py-0.5 rounded text-slate-400">python manage.py createsuperuser</code>
-        </p>
+        
+          
+    
       </div>
     </div>
   );

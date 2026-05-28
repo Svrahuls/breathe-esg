@@ -35,13 +35,13 @@ INSTALLED_APPS = [
 
     # WhiteNoise
     "whitenoise.runserver_nostatic",
+     
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "corsheaders.middleware.CorsMiddleware",
-
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -137,11 +137,17 @@ REST_FRAMEWORK = {
 }
 
 # CORS
-CORS_ALLOWED_ORIGINS = config(
-    "CORS_ALLOWED_ORIGINS",
-    default="http://localhost:5173,http://localhost:3000",
-    cast=Csv(),
-)
+# CORS
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://breat12.netlify.app",
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+# TEMPORARY FOR TESTING
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_HEADERS = [
     "accept",
@@ -151,11 +157,7 @@ CORS_ALLOW_HEADERS = [
     "x-requested-with",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = config(
-    "CORS_ALLOW_ALL_ORIGINS",
-    default=False,
-    cast=bool,
-)
+
 
 # Logging
 LOGGING = {
