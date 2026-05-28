@@ -15,7 +15,8 @@ export default function Login({ onLogin }) {
       const data = await login(username.trim(), password);
       onLogin(data.user);
     } catch (err) {
-      setError(err.message || "Login failed");
+      // ✅ Sahi
+setError(error.response?.data?.detail || error.response?.data?.message || error.message || "Login failed")
     } finally {
       setLoading(false);
     }
