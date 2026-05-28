@@ -1,0 +1,21 @@
+employee_id,trip_date,travel_type,origin,destination,distance_km,nights,transport_class,amount_usd,currency
+EMP-001,2024-01-08,flight,LHR,JFK,5570,0,economy,620.00,USD
+EMP-002,2024-01-10,flight,LHR,CDG,340,0,business,480.00,USD
+EMP-003,2024-01-12,hotel,,New York,0,3,standard,450.00,USD
+EMP-004,2024-01-15,ground,Manchester,London,290,0,standard,85.00,GBP
+EMP-001,2024-01-16,hotel,,New York,0,4,standard,600.00,USD
+EMP-005,2024-01-18,flight,LHR,DXB,5500,0,first,2100.00,USD
+EMP-006,2024-01-22,flight,MAN,AMS,,0,economy,210.00,EUR
+EMP-007,2024-01-25,hotel,,Singapore,0,-1,standard,320.00,USD
+EMP-002,2024-02-03,ground,London,Birmingham,160,0,standard,55.00,GBP
+EMP-008,2024-02-05,flight,LHR,SYD,16993,0,business,3800.00,USD
+EMP-003,2024-02-07,flight,JFK,LAX,3983,0,economy,340.00,USD
+EMP-009,2024-02-10,hotel,,Los Angeles,0,2,standard,380.00,USD
+EMP-010,2024-02-14,ground,Edinburgh,Glasgow,72,0,standard,28.00,GBP
+EMP-001,2024-02-19,flight,LHR,ORD,6340,0,economy,580.00,USD
+EMP-005,2024-02-21,hotel,,Dubai,0,3,first,890.00,USD
+EMP-006,2024-02-28,flight,LHR,BOS,5265,0,economy,490.00,USD
+EMP-004,2024-03-04,ground,London,Bristol,190,0,standard,62.00,GBP
+EMP-007,2024-03-08,flight,SIN,HKG,2575,0,business,780.00,USD
+EMP-008,2024-03-12,hotel,,Chicago,0,5,standard,750.00,USD
+EMP-001,2024-01-08,flight,LHR,JFK,5570,0,economy,620.00,USD

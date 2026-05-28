@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sidebar-width: 240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #080f1e;
+  color: #e2e8f0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  margin: 0;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Status badge utilities */
+.badge-pending    { @apply bg-blue-500/15 text-blue-300 border border-blue-500/30; }
+.badge-approved   { @apply bg-emerald-500/15 text-emerald-300 border border-emerald-500/30; }
+.badge-rejected   { @apply bg-red-500/15 text-red-300 border border-red-500/30; }
+.badge-suspicious { @apply bg-amber-500/15 text-amber-300 border border-amber-500/30; }
+.badge-duplicate  { @apply bg-purple-500/15 text-purple-300 border border-purple-500/30; }
+
+.card {
+  @apply bg-slate-900 border border-slate-800 rounded-xl;
+}
+
+.btn-primary {
+  @apply bg-emerald-600 hover:bg-emerald-500 text-white font-medium px-4 py-2 rounded-lg
+         transition-colors duration-150 disabled:opacity-40 disabled:cursor-not-allowed;
+}
+
+.btn-ghost {
+  @apply border border-slate-700 hover:border-slate-600 hover:bg-slate-800 text-slate-300
+         font-medium px-4 py-2 rounded-lg transition-colors duration-150;
+}
+
+.input {
+  @apply bg-slate-800 border border-slate-700 text-slate-100 rounded-lg px-3 py-2
+         focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500
+         placeholder:text-slate-500 text-sm;
+}

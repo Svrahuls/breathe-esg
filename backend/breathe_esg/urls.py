@@ -1,0 +1,13 @@
+from django.contrib import admin
+from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
+from ingestion.auth_views import LoginView, LogoutView, MeView
+
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("api/auth/login/",  LoginView.as_view()),
+    path("api/auth/logout/", LogoutView.as_view()),
+    path("api/auth/me/",     MeView.as_view()),
+    path("api/", include("ingestion.urls")),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
