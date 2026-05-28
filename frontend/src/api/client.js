@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "https://breathe-esg-vshf.onrender.com/api";
+const BASE_URL = "https://breathe-esg-vqgq.onrender.com/";
 
 const TOKEN_KEY = "breathe_token";
 export const getToken   = ()      => localStorage.getItem(TOKEN_KEY);
