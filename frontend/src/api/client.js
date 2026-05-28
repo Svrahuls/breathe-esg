@@ -1,8 +1,5 @@
 import axios from "axios";
-
-const BASE_URL = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL}/api`
-  : "/api";
+const BASE_URL = "https://breathe-esg-vshf.onrender.com/api";
 
 const TOKEN_KEY = "breathe_token";
 export const getToken   = ()      => localStorage.getItem(TOKEN_KEY);
