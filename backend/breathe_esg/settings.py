@@ -9,7 +9,7 @@ SECRET_KEY = config(
     default="django-insecure-dev-key-change-in-production"
 )
 
-DEBUG = config("DEBUG", default=True, cast=bool)
+DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = config(
     "ALLOWED_HOSTS",
@@ -153,7 +153,7 @@ CORS_ALLOW_HEADERS = [
 
 CORS_ALLOW_ALL_ORIGINS = config(
     "CORS_ALLOW_ALL_ORIGINS",
-    default=True,
+    default=False,
     cast=bool,
 )
 
