@@ -1,27 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import Upload from "./pages/Upload";
 import Review from "./pages/Review";
-import Login from "./pages/login";
-import { getToken, fetchMe, logout } from "./api/client";
+import { logout } from "./api/client";
 
 export default function App() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    if (!getToken()) { setUser(false); return; }
-    fetchMe().then(setUser).catch(() => setUser(false));
-  }, []);
-
-  if (user === null) return (
-    <div className="min-h-screen bg-[#080f1e] flex items-center justify-center">
-      <div className="w-8 h-8 border-2 border-emerald-500/30 border-t-emerald-500 rounded-full animate-spin" />
-    </div>
-  );
-
-  if (user === false) return <Login onLogin={setUser} />;
+  const user = { username: "admin" }; // ← Dummy user, login skip
 
   return (
     <div className="flex min-h-screen">
